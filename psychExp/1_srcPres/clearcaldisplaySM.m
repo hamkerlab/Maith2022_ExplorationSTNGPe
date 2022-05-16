@@ -1,1 +1,0 @@
-function clearcaldisplaySM(el)Screen( el.window, 'FillRect',  el.backgroundcolour );	% clear_cal_display()Screen(el.window,'Flip');

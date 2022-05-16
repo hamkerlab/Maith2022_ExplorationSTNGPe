@@ -1,6 +1,6 @@
 import numpy as np
 import pylab as plt
-from extra_functions import get_output, get_block_trials, get_block_trials_are_correct, get_initial_trials, get_initial_weights, get_switch_weights, plot_column, get_initial_weights_initial_learning
+from extra_functions import get_output, get_block_trials, get_block_trials_are_correct, get_initial_trials, get_initial_weights, get_switch_weights, plot_column, get_initial_weights_initial_learning, save_2_within_arrays
 
 font = {'family' : 'Arial',
         'weight' : 'normal',
@@ -12,7 +12,7 @@ plt.rc('font', **font)
 num_sims=60
 num_blocks=60
 folder='../../../simulations/001e_Cluster_Experiment_PaperLearningRule_LearningON/4_dataEv'
-post_switch_trials=11 # how many trials after switch should be analyzed
+post_switch_trials=7 # how many trials after switch should be analyzed
 
 """
 Performance Plot of 60 Simulations:
@@ -60,6 +60,7 @@ for sim_id in range(num_sims):
     new_correct_number[sim_id] = np.mean(block_is_new_correct,0)
     ### GET HOW MANY TRIALS SWITCH TOOK
     number_errors[sim_id] = np.sum(np.logical_not(block_is_new_correct),1)-1 # sum of trials which are not new correct (-1 because of pre switch trial)
+
     
     ### WEIGHTS
     switch_weights_sd1[sim_id] = get_switch_weights(mw_sd1[1:trials+1].reshape(trials,5), post_switch_trials, correct)
@@ -76,7 +77,8 @@ for sim_id in range(num_sims):
     initial_weights_sd1[sim_id] = get_initial_weights_initial_learning(mw_sd1[:trials].reshape(trials,5), post_switch_trials, correct)
     initial_weights_sd2[sim_id] = get_initial_weights_initial_learning(mw_sd2[:trials].reshape(trials,5), post_switch_trials, correct)
     initial_weights_stn[sim_id] = get_initial_weights_initial_learning(mw_stn[:trials].reshape(trials,5), post_switch_trials, correct)
-    
+  
+number_errors_per_sim=np.mean(number_errors,1) 
 
 ### PLOT
 plt.figure(figsize=(8.5/2.54,8.5/2.54),dpi=500)
@@ -94,11 +96,15 @@ plt.savefig('../3_results/global_performance.svg')
 with open('../3_results/quantities.txt', 'w') as f:
     ### AVERAGE ERRORS
     print('number of errors:', file=f)
-    print('initial:', np.mean(number_initial_errors,0),np.std(number_initial_errors,0), file=f)
-    print('reversal:', np.mean(number_errors),np.std(number_errors), '\n', file=f)
+    print('initial:', np.mean(number_initial_errors),np.std(number_initial_errors), file=f)
+    print('reversal:', np.mean(number_errors_per_sim),np.std(number_errors_per_sim), '\n', file=f)
     ### HOW MANY TRIALS UNTIL 100%
     print('number of trials until 100%:', file=f)
     print('(first trial is pre block beginning!)', file=f)
     print('initial:', np.mean(initial_trials,0), file=f)
-    print('reversal:', np.mean(pre_correct_number,0), file=f)
+    print('reversal:', np.mean(pre_correct_number,0), np.mean(new_correct_number,0), file=f)
+    
+
+### SAVES FOR STATS
+save_2_within_arrays('number_of_errors_sims.txt', 'ERRORS', number_initial_errors, number_errors_per_sim)
 
