@@ -30,18 +30,27 @@ Description of the results generated in Python. For several figures, additional 
 
 Results | analysis | experimental data | simulated data | simulations | comment
 -|-|-|-|-|-
-Figure 3 | **manuscript_global_performance**/ and **manuscript_global_performance_vps**/ | yes | yes | 60 simulations from **001e...**/ | parametrs in script
+Figure 3 | **manuscript_global_performance**/ and **manuscript_global_performance_vps**/ | yes | yes | 60 simulations from **001e...**/ | arguments for function `plot_column`: `mode='scatter'` and `classic_plot=1` (only in **manuscript_global_performance**/)
 Figure 4 | **manuscript_SRtask_results**/ | yes | yes | 60 simulations from **001e...**/ and **002e...**/ each |
 Figure 5 | **manuscript_vp_learning_details**/ | yes | no | - |
 Figure 6 | **manuscript_Figure_activities_and_weightchanges**/ | no | yes | a single simulation from **001e...**/ and **007a...**/ | various simulation times are set manually in the analysis (taken from the output file of the simulation), a change of the simulation used requires an adjustment of these times
-Figure S1 | **manuscript_global_performance**/ | no | yes | 60 simulations from **001e...**/ | parameters in script
+Figure S1 | **manuscript_global_performance**/ | no | yes | 60 simulations from **001e...**/ | arguments for function `plot_column`: `classic_plot=0`
 Figure S2 | **manuscript_vp_learning_details**/ | yes | no | - |
 
+All statistical tests of the study are performed in **analyses/manuscript_statistics**/ which requires the prior performance of the analyses: **manuscript_SRtask_results**/, **manuscript_global_performance**/ and **manuscript_global_performance_vps**/.
 
 # Platforms
 
 * GNU/Linux
 
-# Dependencies
+# Dependencies (given versions used in study)
 
-* ANNarchy >= 4.7
+* Python >= 3.7.4
+* ANNarchy >= 4.7.0
+* matplotlib >= 3.4.1
+* numpy >= 1.21.3
+* pandas >= 1.3.5
+* pingouin >= 0.5.1
+* scikit-learn >= 0.22.2.post1
+* scipy >= 1.7.1
+* tqdm >= 4.36.1
