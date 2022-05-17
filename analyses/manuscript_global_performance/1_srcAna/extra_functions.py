@@ -193,7 +193,7 @@ def selections_to_scatter(selections, trials, size=10 ,return_counts=False, max_
         return [x_scatter,y_scatter,s_scatter]
 
 
-def plot_column(title, col, selections, weights_sd1, weights_sd2, weights_stn, post_switch_trials, bold_font, large_bold_font,mode='scatter'):
+def plot_column(title, col, selections, weights_sd1, weights_sd2, weights_stn, post_switch_trials, bold_font, large_bold_font,mode='scatter',classic_plot=1):
     """
         plots one column of the plot
     """
@@ -203,7 +203,7 @@ def plot_column(title, col, selections, weights_sd1, weights_sd2, weights_stn, p
     weights_sd2 = np.mean(weights_sd2,0)
     weights_stn = np.mean(weights_stn,0)
     
-    classic_plot=1
+    
     if classic_plot:
     
     
