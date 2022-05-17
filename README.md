@@ -43,6 +43,14 @@ All statistical tests of the study are performed in **analyses/manuscript_statis
 
 * GNU/Linux
 
-# Dependencies
+# Dependencies (given versions used in study)
 
-* ANNarchy >= 4.7
+* Python >= 3.7.4
+* ANNarchy >= 4.7.0
+* matplotlib >= 3.4.1
+* numpy >= 1.21.3
+* pandas >= 1.3.5
+* pingouin >= 0.5.1
+* scikit-learn >= 0.22.2.post1
+* scipy >= 1.7.1
+* tqdm >= 4.36.1
