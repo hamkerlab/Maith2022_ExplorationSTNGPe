@@ -7,7 +7,6 @@ from scipy import stats
 from pingouin import mixed_anova, rm_anova
 from pandas import DataFrame
 import pandas as pd
-from CompNeuroPy import print_df
 
 
 def getData(datafile):
