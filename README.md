@@ -1,6 +1,6 @@
 # Maith2022_ExplorationSTNGPe
 
-Source code of simulations and analyses from Maith, O., Baladron, J., Einhäuser, W., & Hamker, F. H. (2022). Human exploration behaviour in a novel reversal learning task explained by a basal ganglia model with adaptive STN-GPe connections. Submitted to *Nature Human Behaviour*.
+Source code of simulations and analyses from Maith, O., Baladron, J., Einhäuser, W., & Hamker, F. H. (2022). Human exploration behaviour in a novel reversal learning task explained by a basal ganglia model with adaptive STN-GPe connections. Submitted to *Nature Communications*.
 
 ## Authors:
 
