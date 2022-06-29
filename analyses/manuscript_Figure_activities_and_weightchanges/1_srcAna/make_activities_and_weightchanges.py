@@ -89,7 +89,7 @@ for useSIM in [2]:
     legend["bottom"]      = -1.3 # relative to subplot A coordinates
     legend["arrowlength"] = 0.2
     
-    cmap_dw = LinearSegmentedColormap.from_list("mycmap", ['red','white','lime'])
+    cmap_dw = LinearSegmentedColormap.from_list("mycmap", ['purple','white','green'])
     cmap_activities = LinearSegmentedColormap.from_list("mycmap", ['blue','white','orange'])
 
 
