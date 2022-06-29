@@ -26,7 +26,7 @@ Source code of simulations and analyses from Maith, O., Baladron, J., Einhäuser
 
 ### Results Pipelines
 
-Description of the results generated in Python. For several figures, additional image processing software was used to create the final figures (to adjust the layout).
+Description of the results generated in Python. For several figures, additional image processing software was used to create the final figures (to adjust the layout and/or colors).
 
 Results | analysis | experimental data | simulated data | simulations | comment
 -|-|-|-|-|-
