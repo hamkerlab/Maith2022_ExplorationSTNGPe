@@ -34,7 +34,7 @@ Figure 3 | **manuscript_global_performance**/ and **manuscript_global_performanc
 Figure 4 | **manuscript_SRtask_results**/ | yes | yes | 60 simulations from **001e...**/ and **002e...**/ each |
 Figure 5 | **manuscript_vp_learning_details**/ | yes | no | - |
 Figure 6 | **manuscript_Figure_activities_and_weightchanges**/ | no | yes | a single simulation from **001e...**/ and **007a...**/ | various simulation times are set manually in the analysis (taken from the output file of the simulation), a change of the simulation used requires an adjustment of these times
-Figure S1 | **manuscript_global_performance**/ | no | yes | 60 simulations from **001e...**/ | arguments for function `plot_column`: `classic_plot=0`
+Figure S1 | **manuscript_global_performance**/ | no | yes | 60 simulations from **001e...**/ | `post_switch_trials=11`; arguments for function `plot_column`: `classic_plot=0`
 Figure S2 | **manuscript_vp_learning_details**/ | yes | no | - |
 
 All statistical tests of the study are performed in **analyses/manuscript_statistics**/ which requires the prior performance of the analyses: **manuscript_SRtask_results**/, **manuscript_global_performance**/ and **manuscript_global_performance_vps**/.
