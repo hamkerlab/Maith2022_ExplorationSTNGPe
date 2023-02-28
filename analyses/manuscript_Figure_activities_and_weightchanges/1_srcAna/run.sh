@@ -1,0 +1,6 @@
+python make_activities_and_weightchanges.py 0
+python make_activities_and_weightchanges.py 1
+python make_activities_and_weightchanges.py 2
+python make_activities_and_weightchanges.py 3
+python make_activities_and_weightchanges.py 4
+python make_activities_and_weightchanges.py 5
