@@ -30,12 +30,15 @@ Description of the results generated in Python. For several figures, additional 
 
 Results | analysis | experimental data | simulated data | simulations | comment
 -|-|-|-|-|-
-Figure 3 | **manuscript_global_performance**/ and **manuscript_global_performance_vps**/ | yes | yes | 60 simulations from **001e...**/ | arguments for function `plot_column`: `mode='scatter'` and `classic_plot=1` (only in **manuscript_global_performance**/)
-Figure 4 | **manuscript_SRtask_results**/ | yes | yes | 60 simulations from **001e...**/ and **002e...**/ each |
-Figure 5 | **manuscript_vp_learning_details**/ | yes | no | - |
-Figure 6 | **manuscript_Figure_activities_and_weightchanges**/ | no | yes | a single simulation from **001e...**/ and **007a...**/ | various simulation times are set manually in the analysis (taken from the output file of the simulation), a change of the simulation used requires an adjustment of these times
-Figure S1 | **manuscript_global_performance**/ | no | yes | 60 simulations from **001e...**/ | `post_switch_trials=11`; arguments for function `plot_column`: `classic_plot=0`
-Figure S2 | **manuscript_vp_learning_details**/ | yes | no | - |
+Figure 3 | **manuscript_global_performance**/ and **manuscript_global_performance_vps**/ | yes | yes | 60 simulations from **014a...**/ and **014b...**/ each | in **manuscript_global_performance**/ use run.sh (which also generates further figures); in **manuscript_global_performance_vps**/ run make_plot.py twice, with arguments 0 and 1
+Figure 4 | **manuscript_SRtask_results**/ | yes | yes | 60 simulations from **014a...**/ and **014b...**/ each | use run.sh (which also generates further figures)
+Figure 5 | **manuscript_vp_learning_details**/ | yes | no | - | run make_plot.py twice, with arguments 0 and 1
+Figure 6 | **manuscript_Figure_activities_and_weightchanges**/ | no | yes | 60 simulations from **014a...**/ and **014b...**/ and a single simulation from **007a...**/| use run.sh (which also generates further figures), various simulation times are set manually in the analysis (taken from the output file of the simulation), a change of the simulation used requires an adjustment of these times
+Figure 7 | **manuscript_weight_morphing**/ | no | yes | 6400 simulations from **013...**/ | 
+Figure S1 | **manuscript_SRtask_results**/ | yes | yes | 60 simulations from **001e...**/ and **001f...**/ each | use run.sh (which also generates further figures)
+Figure S2 | **manuscript_global_performance**/ | no | yes | 60 simulations from **001e...**/ and **001f...**/ each | use run.sh (which also generates further figures)
+Figure S3 | **manuscript_global_performance**/ | no | yes | 60 simulations from **014a...**/ | set `weight_plot=True` (extra_functions.py line 267)
+...
 
 All statistical tests of the study are performed in **analyses/manuscript_statistics**/ which requires the prior performance of the analyses: **manuscript_SRtask_results**/, **manuscript_global_performance**/ and **manuscript_global_performance_vps**/.
 
