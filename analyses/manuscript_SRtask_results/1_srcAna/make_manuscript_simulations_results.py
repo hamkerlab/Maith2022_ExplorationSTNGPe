@@ -700,7 +700,12 @@ def getRsIdx(trial, correctList, decisionList, blockList=None):
         # go over trials until the newCorrect gets selected two times = end of the exploration
         # also end if correct changes again or end of trials is reached
         while (
-            (bool(decisionList[i] == newCorrect) is False)
+            (
+                bool(
+                    decisionList[i] == newCorrect and decisionList[i + 1] == newCorrect
+                )
+                is False
+            )
             and (newCorrect == correctList[i + 1])
             and i < decisionList.shape[0] - 2
         ):
@@ -708,7 +713,7 @@ def getRsIdx(trial, correctList, decisionList, blockList=None):
         end = i
 
         ### check if while ended because decisions are new correct
-        if decisionList[i] == newCorrect:
+        if decisionList[i] == newCorrect and decisionList[i + 1] == newCorrect:
             ended_because_rewarded = True
         else:
             ### ended because i+1 reached end of decisionlist or because correct changed again --> next block
