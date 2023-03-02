@@ -38,9 +38,13 @@ Figure 7 | **manuscript_weight_morphing**/ | no | yes | 6400 simulations from **
 Figure S1 | **manuscript_SRtask_results**/ | yes | yes | 60 simulations from **001e...**/ and **001f...**/ each | use run.sh (which also generates further figures)
 Figure S2 | **manuscript_global_performance**/ | no | yes | 60 simulations from **001e...**/ and **001f...**/ each | use run.sh (which also generates further figures)
 Figure S3 | **manuscript_global_performance**/ | no | yes | 60 simulations from **014a...**/ | set `weight_plot=True` (extra_functions.py line 267)
-...
+Figure S4 | **manuscript_clockwise**/ | yes | no | - | run make_plot.py twice, with arguments 0 and 1
+Figure S5 | **manuscript_vp_learning_details**/ | yes | no | - | run make_plot.py with argument 0
+Figure S6 | **manuscript_SRtask_results**/ | yes | yes | 60 simulations from **014c...**/ and **014d...**/ each | use run.sh (which also generates further figures)
+Figure S7 | **manuscript_Figure_activities_and_weightchanges**/ | no | yes | 60 simulations from **001e...**/ and **001f...**/ | use run.sh (which also generates further figures)
+Figure S9 | **manuscript_statistics**/ | yes | yes | - | see below
 
-All statistical tests of the study are performed in **analyses/manuscript_statistics**/ which requires the prior performance of the analyses: **manuscript_SRtask_results**/, **manuscript_global_performance**/ and **manuscript_global_performance_vps**/.
+All statistical tests of the study are performed in **analyses/manuscript_statistics**/ which requires the prior performance of the analyses: **manuscript_SRtask_results**/ (use run.sh), **manuscript_global_performance**/ (use run.sh), and **manuscript_global_performance_vps**/ (with arguments 0 and 1).
 
 # Platforms
 
@@ -49,7 +53,7 @@ All statistical tests of the study are performed in **analyses/manuscript_statis
 # Dependencies (given versions used in study)
 
 * Python >= 3.7.4
-* ANNarchy >= 4.7.0
+* ANNarchy >= 4.7.1.4
 * matplotlib >= 3.4.1
 * numpy >= 1.21.3
 * pandas >= 1.3.5
